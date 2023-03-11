@@ -1,42 +1,107 @@
-<!DOCTYPE HTML>
 <html>
-  <head>
-    <title>C2201</title>
-    <style>
-      .center
-      {
-        text-align:center;
-      }
-      .left
-      {
-        text-align:left;
-      }
-      .right
-      {
-        text-align:right;
-      }
-      button
-      {
-        width: 270px;
-        height: 40px;
-        border-width: 0px;
-        border-radius: 20px;
-        background: #1E90FF;
-        cursor: pointer;
-        outline: none;
-        color: black;
-        font-size: 17px;
-      }
-      button:hover
-      {
-        background: #5599FF;
-      }
-    </style>
-  </head>
-  <body>
-    <p>
-      <h2 class="left">C2201</h2>
-      <a href="c2201.github.io" class="right">首页</a>
-    </p>
-  </body>
+    <head>
+        <title>1</title>
+        <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 60px;
+
+/* add this line */
+text-decoration:none; /* remove underline from logo */
+
+float:left; /* make logo float to the left */
+
+}
+
+.menu {
+   list-style-type: none; 
+   display: flex; 
+   align-items: center; 
+}
+
+.menu li a {
+   color: white; 
+   text-decoration:none; 
+   padding:10px; 
+   display:block; 
+}
+
+.hamburger {
+   width:40px; 
+   height:40px; 
+   position:relative; 
+   top:-50%; 
+   right:-90%; 
+   display:none; /* hide hamburger icon by default */
+}
+
+.hamburger span {
+   width:100%; 
+   height:4px; 
+   background-color:white; 
+   position:absolute;  
+}
+
+.hamburger span:nth-child(1) { /* first line */
+    top :0%;
+}
+.hamburger span:nth-child(2) { /* second line */
+    top :50%;
+}
+.hamburger span:nth-child(3) { /* third line */
+    top :100%;
+}
+
+
+/* media query for small screens */
+@media screen and (max-width :768px) {
+
+ .menu { /* hide menu list by default */
+     display:none;
+ }
+
+ .hamburger { /* show hamburger icon on small screens */
+     display:block;
+ }
+
+        </style>
+    </head>
+    <body>
+
+<nav class="navbar">
+  <div class="container">
+    <a href="https://c2201.github.io/" class="logo">C2201</a>
+    <ul class="menu">
+      <li><a href="https://c2201.github.io/">首页</a></li>
+      <li><a href="https://c2201.github.io/news/">新闻</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+    </body>
 </html>
