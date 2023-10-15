@@ -1,100 +1,152 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>C2201-首页</title>
-        <style>
+<head>
+	<title>C2201</title>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+	<style>
+		#footer {
+         height: 20px;
+         background-color: #555;
+         width: 100%;
+      }
+      #copyright {
+         margin-top: 2px;
+         font-size: 14px;
+         color: #ffffff;
+         text-align: center;
+      }
+		.navbar {
+			background-color: #555;
+			padding: 10px 20px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		
+		.navbar h2 {
+			color: #fff;
+			margin: 0;
+			font-size: 28px;
+		}
+		
+		.navbar ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.navbar li {
+			margin-right: 20px;
+		}
+		
+		.navbar a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 10px 20px;
+		}
+		a:hover {
+			color: red;
+            		}
+	</style>
+</head>
+<body>
+	<div class="navbar" id="navbar">
+		<h2>C2201</h2>
+		<ul>
+			<li><a href="#navbar">主页</a></li>
+			<li><a href="#games">游戏中心</a></li>
+			<li><a href="#links">网站直达</a></li>
+		</ul>
+	</div>
+	<!-- 这里添加你希望跳转到的页面 -->
+	<div id="home" style="background-color: #fff; height: 700px;">
+		<div style="height: 100px;"></div>
+  		<p><h1 style="text-align: center;">欢迎来到C2201官网</h1></p>
+  		<p><h3 style="text-align: center;">计算机课必备网站~</h3></p>
+  		<p><h5 style="text-align: center;">滑到下面探索更多</h5></p>
+	</div>
+	
+	<div id="games" style="background-color: #f0f0f0; padding: 20px; height: 700px;">
+  <h1 style="text-align: center;">游戏中心</h1>
 
-.navbar {
-  width: 100%;
-  height: 60px;
-  background-color: #333;
-}
+  <div style="display: flex; justify-content: space-between; margin-top: 30px;">
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
+    <div class="card" style="flex: 0 0 calc(45vw + 0.5px); height: 250px; border-radius: 10px; background-color: #fff; padding: 20px;">
+      <h3>SubwaySurfers地铁跑酷</h3>
+      <a href="https://igroutka.ru/igry-subway-surfers/35641-subway-surfers-world-tour-beijing.html" target="_blank">
+        <button style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px;">
+          打开 →
+        </button>
+      </a>
+    </div>
 
-.logo {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 60px;
+    <div class="card" style="flex: 0 0 calc(45vw + 0.5px); height: 250px; border-radius: 10px; background-color: #fff; padding: 20px;">
+      <h3>Minecraft我的世界</h3>
+      <a href="https://c2201.github.io/mc/" target="_blank">
+        <button style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px;">
+          打开 →
+        </button>
+      </a>
+    </div>
 
-/* add this line */
-text-decoration:none; /* remove underline from logo */
+  </div>
 
-float:left; /* make logo float to the left */
+  <div style="display: flex; justify-content: space-between; margin-top: 20px;">
 
-}
+    <div class="card" style="flex: 0 0 calc(45vw + 0.5px); height: 250px; border-radius: 10px; background-color: #fff; padding: 20px;">
+      <h3>Poki.cn</h3>
+      <a href="https://poki.com/zh" target="_blank">
+        <button style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px;">
+          打开 →
+        </button>
+      </a>
+    </div>
 
-.menu {
-   list-style-type: none; 
-   display: flex; 
-   align-items: center; 
-}
+    <div class="card" style="flex: 0 0 calc(45vw + 0.5px); height: 250px; border-radius: 10px; background-color: #fff; padding: 20px;">
+      <h3>更多敬请期待~</h3>
+      <a href="https://www.bilibili.com/video/BV1GJ411x7h7/" target="_blank">
+        <button style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; border-radius: 5px;">
+          打开 →
+        </button>
+      </a>
+    </div>
 
-.menu li a {
-   color: white; 
-   text-decoration:none; 
-   padding:10px; 
-   display:block; 
-}
-
-.hamburger {
-   width:40px; 
-   height:40px; 
-   position:relative; 
-   top:-50%; 
-   right:-90%; 
-   display:none; /* hide hamburger icon by default */
-}
-
-.hamburger span {
-   width:100%; 
-   height:4px; 
-   background-color:white; 
-   position:absolute;  
-}
-
-.hamburger span:nth-child(1) { /* first line */
-    top :0%;
-}
-.hamburger span:nth-child(2) { /* second line */
-    top :50%;
-}
-.hamburger span:nth-child(3) { /* third line */
-    top :100%;
-}
+  </div>
+</div>
 
 
-/* media query for small screens */
-@media screen and (max-width :768px) {
+	<div id="links" style="height: 700px; background-color: #FFFFFF; text-align: center;">
+    <h1 style="margin-top: 50px;">网站直达</h1>
+    <h2 style="display: inline-block; margin: 20px; padding: 10px; font-size: 24px; color: #000000; text-decoration: none;">
+      <a href="https://www.baidu.com/" style="color: #000000; text-decoration: none;">百度</a>
+    </h2>
+    <h2 style="display: inline-block; margin: 20px; padding: 10px; font-size: 24px; color: #000000; text-decoration: none;">
+      <a href="https://www.douyin.com/" style="color: #000000; text-decoration: none;">抖音</a>
+    </h2>
+    <h2 style="display: inline-block; margin: 20px; padding: 10px; font-size: 24px; color: #000000; text-decoration: none;">
+      <a href="https://www.bilibili.com/" style="color: #000000; text-decoration: none;">哔哩哔哩</a>
+    </h2>
+    <h2 style="display: inline-block; margin: 20px; padding: 10px; font-size: 24px; color: #000000; text-decoration: none;">
+      <a href="https://cn.bing.com/" style="color: #000000; text-decoration: none;">Microsoft Bing</a>
+    </h2>
+    <h2 style="display: inline-block; margin: 20px; padding: 10px; font-size: 24px; color: #000000; text-decoration: none;">
+      <a href="https://www.minecraft.net/" style="color: #000000; text-decoration: none;">Minecraft官网</a>
+    </h2>
+    <h2 style="display: inline-block; margin: 20px; padding: 10px; font-size: 24px; color: #000000; text-decoration: none;">
+      <a href="chrome://dino/" style="color: #000000; text-decoration: none;">谷歌小恐龙</a>
+    </h2>
+  </div>
 
- .menu { /* hide menu list by default */
-     display:none;
- }
+<div id="footer">
+      <h5 id="copyright">Copyright © Tang™. 
+         Do not distribute!  
+         |  Tang™ 版权所有，侵权必究！
+      </h5>
+   </div>
 
- .hamburger { /* show hamburger icon on small screens */
-     display:block;
- }
-
-        </style>
-    </head>
-    <body>
-
-<nav style="background-color: #404040;">
-  <ul style="list-style-type: none; margin: 0; padding: 0;">
-    <li style="display: inline-block; font-size: 32px; font-weight: bold;color:white;">C2201</li>
-    <li style="display: inline-block; margin-left: 20px;"><a href="https://c2201.github.io/" style="color: white; text-decoration: none;">首页</a></li>
-    <li style="display: inline-block; margin-left: 20px;"><a href="https://c2201.github.io/news/" style="color: white; text-decoration: none;">新闻</a></li>
-  </ul>
-</nav>
-
-    </body>
+</body>
 </html>
